@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="tvOS_First_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="G9u-gK-Xbq">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nP0-K9-S41"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eYF-rE-BuN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G9u-gK-Xbq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Syx-dK-YpA"/>
+                            <constraint firstAttribute="trailing" secondItem="G9u-gK-Xbq" secondAttribute="trailing" id="TvF-QZ-Kn7"/>
+                            <constraint firstAttribute="bottom" secondItem="G9u-gK-Xbq" secondAttribute="bottom" id="oQ5-9l-Q5W"/>
+                            <constraint firstItem="G9u-gK-Xbq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sep-OC-1gB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="e4f-ZD-0xH"/>
+                    <connections>
+                        <outlet property="homeDataTableView" destination="G9u-gK-Xbq" id="lfk-Id-wix"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="-1323"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="toE-ut-239">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fle-Ti-piJ" customClass="SearchViewController" customModule="tvOS_First_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uHw-fM-h7S"/>
+                        <viewControllerLayoutGuide type="bottom" id="7lo-e9-1Bl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vW5-pl-f9y">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wy8-3D-RcQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j2E-l1-CeE">
+                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bv3-fu-bNS" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="119" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="A"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnK-J8-uSH" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="181" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="B"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRC-ve-0al" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="247" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="C"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-Ia-Z7m" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="309" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="D"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-OJ-ykg" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="369" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="E"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYL-Dn-Sms" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="431" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="F"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEn-0a-5sG" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="497" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="G"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hD8-zE-NRY" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="559" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="H"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJT-Py-uGR" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="628" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="I"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msU-0r-qJY" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="690" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="J"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nso-mU-rZ9" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="756" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="K"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7O-fS-C8n" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="818" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="L"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alS-lM-8Sy" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="878" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="M"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBW-g1-fQQ" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="940" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="N"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgC-Nh-AdH" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1006" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="O"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-ZV-Rop" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1068" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="P"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkC-4o-seW" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1124" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Q"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWu-QS-cjf" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1186" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="R"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0t-Qu-ogG" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1252" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="S"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dl-jr-mj2" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1314" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="T"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bb-Vw-VOO" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1374" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="U"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Liz-HJ-wlO" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1436" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="V"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr1-Uf-Xsp" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1502" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="W"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbh-Sa-TlL" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1564" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="X"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS8-dh-0mc" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1633" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Y"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OeB-I8-QCk" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="1695" y="276" width="106" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Z"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-aK-d85" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="809" y="360" width="179" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Space"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w42-E7-eBn" customClass="KeyboardButton" customModule="tvOS_First_Test" customModuleProvider="target">
+                                            <rect key="frame" x="999" y="360" width="179" height="134"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Delete"/>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9K-1j-W3m">
+                                <rect key="frame" x="720" y="108" width="480" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="480" id="afl-sq-fWh"/>
+                                    <constraint firstAttribute="height" constant="80" id="wbb-Tt-FiO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XR0-mB-WmY"/>
+                        <color key="backgroundColor" red="0.074722132731958713" green="0.074722132731958713" blue="0.074722132731958713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="e9K-1j-W3m" firstAttribute="centerX" secondItem="vW5-pl-f9y" secondAttribute="centerX" id="Bi0-bF-zUF"/>
+                            <constraint firstItem="e9K-1j-W3m" firstAttribute="top" secondItem="XR0-mB-WmY" secondAttribute="top" constant="48" id="KjQ-mj-Jbj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gX7-nj-DRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4081" y="-1323"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="6MJ-H5-mWC">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="0Bd-y3-0CI" customClass="DetailViewController" customModule="tvOS_First_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pGG-1N-hx4"/>
+                        <viewControllerLayoutGuide type="bottom" id="hvz-ou-xA7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mQu-2K-vUK">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="debugging" translatesAutoresizingMaskIntoConstraints="NO" id="wVR-mN-tQ3">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-N4-QAk">
+                                <rect key="frame" x="0.0" y="0.0" width="1938" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6aV-ZV-IGp">
+                                    <rect key="frame" x="0.0" y="0.0" width="1938" height="1080"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uim-8W-Ywr">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="648"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="debugging" translatesAutoresizingMaskIntoConstraints="NO" id="Rfr-d5-x6a">
+                                        <rect key="frame" x="978.5" y="68" width="853.5" height="480"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="480" id="Kzo-Ej-p37"/>
+                                            <constraint firstAttribute="width" secondItem="Rfr-d5-x6a" secondAttribute="height" multiplier="16:9" id="f0n-rM-Jk7"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Improve your Debugging Skills" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIZ-eV-7b7">
+                                        <rect key="frame" x="88" y="68" width="810.5" height="69"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-GV-BwR">
+                                        <rect key="frame" x="88" y="197" width="810.5" height="359"/>
+                                        <string key="text">Because we spend a lot of time in fixing bugs and improving the performance of the apps, it is very important to have good debugging skills.
+In this video, I’ve summarised some of the debugging skills that I’ve learnt from my experience. These include Breakpoints, LLDB (po, p, v), Network Link Conditioner, Identifying tricky issues which do not occur on simulator/debug mode, View Hierarchy. 
+
+</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="aWl-xy-tYc">
+                                        <rect key="frame" x="88" y="562" width="784" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ha-4g-pxP">
+                                                <rect key="frame" x="0.0" y="0.0" width="372" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="didClickOnPlayButton:" destination="0Bd-y3-0CI" eventType="primaryActionTriggered" id="mPA-Cz-0Ut"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdM-3M-RBK">
+                                                <rect key="frame" x="412" y="0.0" width="372" height="86"/>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Add to Favourites"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="784" id="QQZ-To-JpR"/>
+                                            <constraint firstAttribute="height" constant="86" id="hwM-2g-FVC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uiL-GV-BwR" firstAttribute="leading" secondItem="Uim-8W-Ywr" secondAttribute="leading" constant="88" id="9Td-VP-Tlk"/>
+                                    <constraint firstItem="Rfr-d5-x6a" firstAttribute="leading" secondItem="uiL-GV-BwR" secondAttribute="trailing" constant="80" id="P9M-ar-D2a"/>
+                                    <constraint firstItem="LIZ-eV-7b7" firstAttribute="top" secondItem="Uim-8W-Ywr" secondAttribute="top" constant="68" id="Vdz-rg-ZLw"/>
+                                    <constraint firstItem="Rfr-d5-x6a" firstAttribute="top" secondItem="Uim-8W-Ywr" secondAttribute="top" constant="68" id="WUn-GR-hUU"/>
+                                    <constraint firstItem="uiL-GV-BwR" firstAttribute="top" secondItem="LIZ-eV-7b7" secondAttribute="bottom" constant="60" id="b7r-Ok-JtQ"/>
+                                    <constraint firstItem="aWl-xy-tYc" firstAttribute="top" secondItem="uiL-GV-BwR" secondAttribute="bottom" constant="6" id="iUO-cM-8Iy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rfr-d5-x6a" secondAttribute="trailing" constant="88" id="jBp-SR-E6E"/>
+                                    <constraint firstItem="LIZ-eV-7b7" firstAttribute="leading" secondItem="Uim-8W-Ywr" secondAttribute="leading" constant="88" id="jM6-59-PeE"/>
+                                    <constraint firstItem="Rfr-d5-x6a" firstAttribute="leading" secondItem="LIZ-eV-7b7" secondAttribute="trailing" constant="80" id="vba-V4-oa2"/>
+                                    <constraint firstItem="aWl-xy-tYc" firstAttribute="leading" secondItem="Uim-8W-Ywr" secondAttribute="leading" constant="88" id="w65-PF-akH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmZ-A8-iG4">
+                                <rect key="frame" x="0.0" y="648" width="1920" height="432"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-c6-J1O">
+                                        <rect key="frame" x="88" y="48" width="1744" height="340"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="0Bd-y3-0CI" id="d7d-AI-w3s"/>
+                                            <outlet property="delegate" destination="0Bd-y3-0CI" id="LDc-6h-ZUo"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xy3-c6-J1O" secondAttribute="trailing" constant="88" id="AaT-c7-icI"/>
+                                    <constraint firstItem="xy3-c6-J1O" firstAttribute="top" secondItem="nmZ-A8-iG4" secondAttribute="top" constant="48" id="OEA-cF-UTd"/>
+                                    <constraint firstItem="xy3-c6-J1O" firstAttribute="leading" secondItem="nmZ-A8-iG4" secondAttribute="leading" constant="88" id="odQ-Ne-DsW"/>
+                                    <constraint firstAttribute="bottom" secondItem="xy3-c6-J1O" secondAttribute="bottom" constant="44" id="rsq-jC-muC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uXE-cY-eqB"/>
+                        <constraints>
+                            <constraint firstItem="nmZ-A8-iG4" firstAttribute="top" secondItem="Uim-8W-Ywr" secondAttribute="bottom" id="5rH-Oy-Q9e"/>
+                            <constraint firstItem="Uim-8W-Ywr" firstAttribute="top" secondItem="mQu-2K-vUK" secondAttribute="top" id="E1h-Qp-Llx"/>
+                            <constraint firstItem="Uim-8W-Ywr" firstAttribute="height" secondItem="mQu-2K-vUK" secondAttribute="height" multiplier="0.6" id="P4c-ZW-YIe"/>
+                            <constraint firstItem="nmZ-A8-iG4" firstAttribute="leading" secondItem="mQu-2K-vUK" secondAttribute="leading" id="P8F-tH-omn"/>
+                            <constraint firstAttribute="bottom" secondItem="nmZ-A8-iG4" secondAttribute="bottom" id="Y2w-gR-IRO"/>
+                            <constraint firstAttribute="trailing" secondItem="Uim-8W-Ywr" secondAttribute="trailing" id="cXk-78-toc"/>
+                            <constraint firstAttribute="trailing" secondItem="nmZ-A8-iG4" secondAttribute="trailing" id="fyW-48-EqV"/>
+                            <constraint firstItem="Uim-8W-Ywr" firstAttribute="leading" secondItem="mQu-2K-vUK" secondAttribute="leading" id="sM7-n9-e1F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="similarTableView" destination="xy3-c6-J1O" id="YBj-Rw-FuG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cS-p2-O0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4081" y="89"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="fxv-Fr-XiN">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" title="Login" id="alc-Oq-Sr6" customClass="ProfileViewController" customModule="tvOS_First_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s2e-0j-d9r"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0Z-O1-gBM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4u1-6l-qS2">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUb-U1-YI6" userLabel="LoginView">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lowpoly-grey-gradient-vector" translatesAutoresizingMaskIntoConstraints="NO" id="584-8Z-dGe">
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                    </imageView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-pZ-H1n">
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m41-HG-cd2">
+                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="regular"/>
+                                    </visualEffectView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zql-UH-fAH" userLabel="Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iCode_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="RTY-Cg-3Zq">
+                                                <rect key="frame" x="810" y="156" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="KSa-b8-yA4"/>
+                                                    <constraint firstAttribute="width" constant="300" id="abe-OA-FOk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to your account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYR-X2-Nf0">
+                                                <rect key="frame" x="779.5" y="504" width="361" height="46"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-uU-KIS">
+                                                <rect key="frame" x="720" y="610" width="480" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="480" id="E3Y-d7-apc"/>
+                                                    <constraint firstAttribute="height" constant="90" id="LfV-2C-dgs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tU0-p4-0uw">
+                                                <rect key="frame" x="720" y="736" width="480" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="QRe-fr-sDO"/>
+                                                    <constraint firstAttribute="width" constant="480" id="Sr2-BL-wUH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXF-nq-E36">
+                                                <rect key="frame" x="720" y="886" width="480" height="86"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="480" id="Vge-3h-9NM"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="didClickOnSubmitButton:" destination="alc-Oq-Sr6" eventType="primaryActionTriggered" id="L4g-5p-6Ep"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="RTY-Cg-3Zq" firstAttribute="top" secondItem="Zql-UH-fAH" secondAttribute="top" constant="156" id="CiD-KS-Pe2"/>
+                                            <constraint firstItem="RTY-Cg-3Zq" firstAttribute="centerX" secondItem="Zql-UH-fAH" secondAttribute="centerX" id="DkI-W8-TRn"/>
+                                            <constraint firstItem="pYR-X2-Nf0" firstAttribute="top" secondItem="RTY-Cg-3Zq" secondAttribute="bottom" constant="48" id="FcQ-Eq-xqG"/>
+                                            <constraint firstItem="QXF-nq-E36" firstAttribute="height" secondItem="tU0-p4-0uw" secondAttribute="height" multiplier="0.955556" id="KDB-xb-Oyv"/>
+                                            <constraint firstItem="QXF-nq-E36" firstAttribute="centerX" secondItem="tU0-p4-0uw" secondAttribute="centerX" id="Sel-4o-hWC"/>
+                                            <constraint firstItem="dhE-uU-KIS" firstAttribute="top" secondItem="pYR-X2-Nf0" secondAttribute="bottom" constant="60" id="TFd-Sf-x99"/>
+                                            <constraint firstItem="pYR-X2-Nf0" firstAttribute="centerX" secondItem="Zql-UH-fAH" secondAttribute="centerX" id="gag-tQ-R46"/>
+                                            <constraint firstItem="tU0-p4-0uw" firstAttribute="centerX" secondItem="Zql-UH-fAH" secondAttribute="centerX" id="lF5-l8-Moy"/>
+                                            <constraint firstItem="QXF-nq-E36" firstAttribute="top" secondItem="tU0-p4-0uw" secondAttribute="bottom" constant="60" id="uMf-I9-y4H"/>
+                                            <constraint firstItem="tU0-p4-0uw" firstAttribute="top" secondItem="dhE-uU-KIS" secondAttribute="bottom" constant="36" id="uda-O0-MQr"/>
+                                            <constraint firstItem="dhE-uU-KIS" firstAttribute="centerX" secondItem="Zql-UH-fAH" secondAttribute="centerX" id="voc-0u-AVy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="584-8Z-dGe" firstAttribute="top" secondItem="GUb-U1-YI6" secondAttribute="top" id="0mU-O3-7v1"/>
+                                    <constraint firstItem="584-8Z-dGe" firstAttribute="leading" secondItem="GUb-U1-YI6" secondAttribute="leading" id="8OP-Uz-KO4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zql-UH-fAH" secondAttribute="bottom" id="AUS-Rd-gCs"/>
+                                    <constraint firstItem="6I5-pZ-H1n" firstAttribute="leading" secondItem="GUb-U1-YI6" secondAttribute="leading" id="Cpz-4g-vqd"/>
+                                    <constraint firstAttribute="bottom" secondItem="6I5-pZ-H1n" secondAttribute="bottom" id="DPx-ut-Qp1"/>
+                                    <constraint firstItem="6I5-pZ-H1n" firstAttribute="top" secondItem="GUb-U1-YI6" secondAttribute="top" id="IlB-1z-d3D"/>
+                                    <constraint firstItem="Zql-UH-fAH" firstAttribute="top" secondItem="GUb-U1-YI6" secondAttribute="top" id="NrD-P0-pRP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zql-UH-fAH" secondAttribute="trailing" id="QOC-ib-lA3"/>
+                                    <constraint firstAttribute="trailing" secondItem="584-8Z-dGe" secondAttribute="trailing" id="Uxy-IE-dgK"/>
+                                    <constraint firstItem="Zql-UH-fAH" firstAttribute="leading" secondItem="GUb-U1-YI6" secondAttribute="leading" id="bZ9-hy-5Mo"/>
+                                    <constraint firstAttribute="trailing" secondItem="6I5-pZ-H1n" secondAttribute="trailing" id="sK9-4w-WbO"/>
+                                    <constraint firstAttribute="bottom" secondItem="584-8Z-dGe" secondAttribute="bottom" id="zPn-pZ-AOo"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ti-Do-cao" userLabel="ProfileView">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pallav Trivedi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-4t-3SG">
+                                        <rect key="frame" x="1408" y="140" width="424" height="91"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="ckm-XL-hke">
+                                        <rect key="frame" x="88" y="371" width="561" height="641"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <sections/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="alc-Oq-Sr6" id="kn3-rA-r0e"/>
+                                            <outlet property="delegate" destination="alc-Oq-Sr6" id="e8c-b9-LIA"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaC-NO-mdI">
+                                        <rect key="frame" x="1106" y="254" width="726" height="758"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goldMember" translatesAutoresizingMaskIntoConstraints="NO" id="WKT-Ar-VGK">
+                                                <rect key="frame" x="243" y="89" width="240" height="274"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gold Membership" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v0-wx-qJx">
+                                                <rect key="frame" x="23" y="415" width="298" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="₹ 2499/-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYj-oO-D3T">
+                                                <rect key="frame" x="563" y="415" width="155" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Started: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGL-wY-c6T">
+                                                <rect key="frame" x="23" y="507" width="104" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Dec 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQD-4S-DDJ">
+                                                <rect key="frame" x="23" y="561" width="150" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4 Dec 2021" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-VN-4ET">
+                                                <rect key="frame" x="567" y="561" width="146" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RAD-Hd-ndZ">
+                                                <rect key="frame" x="23" y="645" width="690" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finishing" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBu-vf-SfV">
+                                                <rect key="frame" x="600" y="507" width="113" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnl-iF-SD8">
+                                        <rect key="frame" x="1106" y="254" width="726" height="758"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your library is empty." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aub-qA-phD">
+                                                <rect key="frame" x="108" y="345" width="510" height="69"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PyF-4t-3SG" secondAttribute="trailing" constant="88" id="jGW-nw-pqx"/>
+                                    <constraint firstItem="PyF-4t-3SG" firstAttribute="top" secondItem="1Ti-Do-cao" secondAttribute="top" constant="140" id="snn-iJ-muR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Twm-dh-PZ4"/>
+                        <constraints>
+                            <constraint firstItem="1Ti-Do-cao" firstAttribute="top" secondItem="4u1-6l-qS2" secondAttribute="top" id="360-1b-LjF"/>
+                            <constraint firstAttribute="bottom" secondItem="1Ti-Do-cao" secondAttribute="bottom" id="7DH-U0-0vP"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ti-Do-cao" secondAttribute="trailing" id="9gq-QG-c0a"/>
+                            <constraint firstAttribute="trailing" secondItem="GUb-U1-YI6" secondAttribute="trailing" id="SOx-ja-N5L"/>
+                            <constraint firstItem="GUb-U1-YI6" firstAttribute="leading" secondItem="4u1-6l-qS2" secondAttribute="leading" id="eqQ-ZH-lac"/>
+                            <constraint firstAttribute="bottom" secondItem="GUb-U1-YI6" secondAttribute="bottom" id="iUd-40-pFT"/>
+                            <constraint firstItem="1Ti-Do-cao" firstAttribute="leading" secondItem="4u1-6l-qS2" secondAttribute="leading" id="lCF-bm-KOW"/>
+                            <constraint firstItem="GUb-U1-YI6" firstAttribute="top" secondItem="4u1-6l-qS2" secondAttribute="top" id="luu-D3-M4V"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gd3-fw-dvc"/>
+                    <connections>
+                        <outlet property="libraryView" destination="lnl-iF-SD8" id="bpL-We-GXz"/>
+                        <outlet property="loginView" destination="GUb-U1-YI6" id="Cte-KS-zfr"/>
+                        <outlet property="profileView" destination="1Ti-Do-cao" id="sIr-Pe-N93"/>
+                        <outlet property="settingsTableView" destination="ckm-XL-hke" id="ixv-iv-YOO"/>
+                        <outlet property="subscriptionView" destination="ZaC-NO-mdI" id="QMJ-pb-Qis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyY-0t-XjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6255" y="-1323"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="debugging" width="1280" height="720"/>
+        <image name="goldMember" width="196" height="258"/>
+        <image name="iCode_Logo" width="1024" height="1024"/>
+        <image name="lowpoly-grey-gradient-vector" width="1400" height="980"/>
+    </resources>
+</document>

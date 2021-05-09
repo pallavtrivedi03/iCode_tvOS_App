@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="18122" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClassifiedCollectionViewCell" id="Rz2-K0-ksD" customClass="ClassifiedCollectionViewCell" customModule="tvOS_First_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="360"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFg-PQ-nm4">
+                        <rect key="frame" x="16" y="16" width="328" height="328"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-dR-oqc">
+                                <rect key="frame" x="118" y="141" width="92" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eOC-dR-oqc" firstAttribute="centerY" secondItem="XFg-PQ-nm4" secondAttribute="centerY" id="FOV-jb-tXn"/>
+                            <constraint firstItem="eOC-dR-oqc" firstAttribute="centerX" secondItem="XFg-PQ-nm4" secondAttribute="centerX" id="nJu-GL-II5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XFg-PQ-nm4" secondAttribute="trailing" constant="16" id="8tn-8I-S4a"/>
+                <constraint firstItem="XFg-PQ-nm4" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" constant="16" id="Djd-kw-VBA"/>
+                <constraint firstAttribute="bottom" secondItem="XFg-PQ-nm4" secondAttribute="bottom" constant="16" id="Pqy-jc-E4U"/>
+                <constraint firstItem="XFg-PQ-nm4" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" constant="16" id="wLT-yI-AE8"/>
+            </constraints>
+            <size key="customSize" width="376" height="318"/>
+            <connections>
+                <outlet property="containerView" destination="XFg-PQ-nm4" id="PMo-tW-SjL"/>
+                <outlet property="titleLabel" destination="eOC-dR-oqc" id="PDL-em-Kop"/>
+            </connections>
+            <point key="canvasLocation" x="18" y="-102"/>
+        </collectionViewCell>
+    </objects>
+</document>
